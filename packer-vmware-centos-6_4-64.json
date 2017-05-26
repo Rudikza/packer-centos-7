@@ -41,8 +41,8 @@
   ],
   "post-processors": [
     {
-      "type": "vagrant",
-      "keep_input_artifact": false
+      "keep_input_artifact": false,
+      "type": "vagrant"
     }
   ],
   "variables": {
