@@ -3,8 +3,6 @@ modules/*
 keys/*
 .tmp/
 .librarian/
-packer/output/
-packer/packer_cache
-packer/*.box
+packer_cache
 output-virtualbox-iso/*
 iso/*.iso
