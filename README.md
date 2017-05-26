@@ -18,7 +18,7 @@
 
 ## debuging
 
-1. `PACKER_LOG=1 packer-io build packer-virtualbox-centos-6_4-64.json`
+`PACKER_LOG=1 packer-io build packer-virtualbox-centos-6_4-64.json`
 
 ## Debugging each individual step
-1. `packer-io -d build packer-virtualbox-centos-6_4-64.json`
+`packer-io -d build packer-virtualbox-centos-6_4-64.json`
