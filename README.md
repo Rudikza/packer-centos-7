@@ -7,9 +7,14 @@
 
 ## run
 
+### Inspect the json
 1. `packer-io inspect packer-virtualbox-centos-6_4-64.json` 
-1. `packer-io build packer-virtualbox-centos-6_4-64.json # virtualbox build` 
-1. `packer-io build packer-vmware-centos-6_4-64.json # vmware build` 
+
+### Build Virtualbox vagrant box
+`packer-io build packer-virtualbox-centos-6_4-64.json`
+
+### Build VMware vmdk
+`packer-io build packer-vmware-centos-6_4-64.json` 
 
 ## debuging
 
