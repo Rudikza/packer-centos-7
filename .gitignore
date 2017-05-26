@@ -1,0 +1,10 @@
+.vagrant/*
+modules/*
+keys/*
+.tmp/
+.librarian/
+packer/output/
+packer/packer_cache
+packer/*.box
+output-virtualbox-iso/*
+iso/*.iso

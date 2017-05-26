@@ -1,0 +1,52 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "disk_size": "10240",
+      "guest_os_type": "RedHat_64",
+      "http_directory": "http",
+      "iso_checksum": "{{ user `checksum` }}",
+      "iso_checksum_type": "sha256",
+      "iso_url": "{{ user `iso` }}",
+      "shutdown_command": "/sbin/halt -p",
+      "ssh_password": "packer",
+      "ssh_port": 22,
+      "ssh_username": "root",
+      "ssh_wait_timeout": "600s",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "2048"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "2"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--audio",
+          "none"
+        ]
+      ],
+      "vm_name": "TSDCentOS7x86"
+    }
+  ],
+  "post-processors": [
+    {
+      "keep_input_artifact": false,
+      "type": "vagrant"
+    }
+  ],
+  "variables": {
+    "checksum": "27bd866242ee058b7a5754e83d8ee8403e216b93d130d800852a96f41c34d86a",
+    "iso": "iso/CentOS-7-x86_64-Minimal-1611.iso"
+  }
+}
